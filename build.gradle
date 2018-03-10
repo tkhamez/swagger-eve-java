@@ -1,7 +1,7 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'io.swagger.client.eve'
+group = 'com.github.tkhamez'
 version = '0.7.5.1'
 
 buildscript {
@@ -83,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'swagger-java-client'
+            pom.artifactId = 'swagger-eve-java'
         }
     }
 

@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.swagger.client.eve",
-    name := "swagger-java-client",
+    organization := "com.github.tkhamez",
+    name := "swagger-eve-java",
     version := "0.7.5.1",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
