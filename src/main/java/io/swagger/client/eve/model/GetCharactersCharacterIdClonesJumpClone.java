@@ -29,7 +29,7 @@ import java.util.List;
  * jump_clone object
  */
 @ApiModel(description = "jump_clone object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdClonesJumpClone {
   @SerializedName("jump_clone_id")
   private Integer jumpCloneId = null;

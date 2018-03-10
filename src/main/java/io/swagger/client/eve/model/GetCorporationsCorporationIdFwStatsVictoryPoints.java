@@ -27,7 +27,7 @@ import java.io.IOException;
  * Summary of victory points gained by the given corporation for the enlisted faction
  */
 @ApiModel(description = "Summary of victory points gained by the given corporation for the enlisted faction")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCorporationsCorporationIdFwStatsVictoryPoints {
   @SerializedName("yesterday")
   private Integer yesterday = null;

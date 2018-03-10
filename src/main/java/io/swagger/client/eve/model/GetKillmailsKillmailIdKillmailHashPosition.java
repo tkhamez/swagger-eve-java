@@ -27,7 +27,7 @@ import java.io.IOException;
  * Coordinates of the victim in Cartesian space relative to the Sun 
  */
 @ApiModel(description = "Coordinates of the victim in Cartesian space relative to the Sun ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetKillmailsKillmailIdKillmailHashPosition {
   @SerializedName("x")
   private Double x = null;

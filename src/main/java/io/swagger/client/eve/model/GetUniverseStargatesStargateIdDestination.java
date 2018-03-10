@@ -27,7 +27,7 @@ import java.io.IOException;
  * destination object
  */
 @ApiModel(description = "destination object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetUniverseStargatesStargateIdDestination {
   @SerializedName("system_id")
   private Integer systemId = null;

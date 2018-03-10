@@ -27,7 +27,7 @@ import java.io.IOException;
  * Extra information for different type of transaction
  */
 @ApiModel(description = "Extra information for different type of transaction")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdWalletJournalExtraInfo {
   @SerializedName("location_id")
   private Long locationId = null;

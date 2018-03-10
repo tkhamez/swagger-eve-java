@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.swagger</groupId>
+    <groupId>io.swagger.client.eve</groupId>
     <artifactId>swagger-java-client</artifactId>
     <packaging>jar</packaging>
     <name>swagger-java-client</name>
-    <version>1.0.0</version>
-    <url>https://github.com/swagger-api/swagger-codegen</url>
-    <description>Swagger Java</description>
+    <version>0.7.5.1</version>
+    <url>https://github.com/tkhamez/swagger-eve-java</url>
+    <description>EVE Swagger Java Client</description>
     <scm>
-        <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
-        <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
-        <url>https://github.com/swagger-api/swagger-codegen</url>
+        <connection>scm:git:https://github.com/tkhamez/swagger-eve-java.git</connection>
+        <developerConnection>scm:git:https://github.com/tkhamez/swagger-eve-java.git</developerConnection>
+        <url>https://github.com/tkhamez/swagger-eve-java</url>
     </scm>
 
     <licenses>

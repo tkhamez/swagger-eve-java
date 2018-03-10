@@ -27,7 +27,7 @@ import java.io.IOException;
  * No image server for this datasource
  */
 @ApiModel(description = "No image server for this datasource")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetAlliancesAllianceIdIconsNotFound {
   @SerializedName("error")
   private String error = null;

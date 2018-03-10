@@ -27,7 +27,7 @@ import java.io.IOException;
  * dogma_effect object
  */
 @ApiModel(description = "dogma_effect object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetUniverseTypesTypeIdDogmaEffect {
   @SerializedName("effect_id")
   private Integer effectId = null;

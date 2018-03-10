@@ -27,7 +27,7 @@ import java.io.IOException;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCorporationsCorporationIdIconsOk {
   @SerializedName("px64x64")
   private String px64x64 = null;

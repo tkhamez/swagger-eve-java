@@ -27,7 +27,7 @@ import java.io.IOException;
  * 201 created object
  */
 @ApiModel(description = "201 created object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class PostFleetsFleetIdWingsCreated {
   @SerializedName("wing_id")
   private Long wingId = null;

@@ -27,7 +27,7 @@ import java.io.IOException;
  * modifier object
  */
 @ApiModel(description = "modifier object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetDogmaEffectsEffectIdModifier {
   @SerializedName("func")
   private String func = null;

@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.swagger",
+    organization := "io.swagger.client.eve",
     name := "swagger-java-client",
-    version := "1.0.0",
+    version := "0.7.5.1",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

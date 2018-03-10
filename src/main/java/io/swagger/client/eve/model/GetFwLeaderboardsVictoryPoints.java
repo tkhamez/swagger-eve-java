@@ -32,7 +32,7 @@ import java.util.List;
  * Top 4 rankings of factions by victory points from yesterday, last week and in total
  */
 @ApiModel(description = "Top 4 rankings of factions by victory points from yesterday, last week and in total")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetFwLeaderboardsVictoryPoints {
   @SerializedName("yesterday")
   private List<GetFwLeaderboardsYesterday1> yesterday = new ArrayList<GetFwLeaderboardsYesterday1>();

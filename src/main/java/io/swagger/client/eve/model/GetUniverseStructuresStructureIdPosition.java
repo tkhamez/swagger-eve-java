@@ -27,7 +27,7 @@ import java.io.IOException;
  * Coordinates of the structure in Cartesian space relative to the Sun, in metres. 
  */
 @ApiModel(description = "Coordinates of the structure in Cartesian space relative to the Sun, in metres. ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetUniverseStructuresStructureIdPosition {
   @SerializedName("x")
   private Double x = null;

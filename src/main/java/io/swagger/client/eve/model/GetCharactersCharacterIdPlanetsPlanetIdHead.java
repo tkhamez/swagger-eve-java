@@ -27,7 +27,7 @@ import java.io.IOException;
  * head object
  */
 @ApiModel(description = "head object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdPlanetsPlanetIdHead {
   @SerializedName("head_id")
   private Integer headId = null;

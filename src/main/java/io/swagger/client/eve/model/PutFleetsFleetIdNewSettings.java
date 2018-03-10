@@ -27,7 +27,7 @@ import java.io.IOException;
  * new_settings object
  */
 @ApiModel(description = "new_settings object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class PutFleetsFleetIdNewSettings {
   @SerializedName("motd")
   private String motd = null;

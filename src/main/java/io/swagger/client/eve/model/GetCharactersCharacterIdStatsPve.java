@@ -27,7 +27,7 @@ import java.io.IOException;
  * pve object
  */
 @ApiModel(description = "pve object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdStatsPve {
   @SerializedName("dungeons_completed_agent")
   private Long dungeonsCompletedAgent = null;

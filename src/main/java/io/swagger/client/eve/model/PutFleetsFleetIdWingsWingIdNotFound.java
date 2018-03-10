@@ -27,7 +27,7 @@ import java.io.IOException;
  * Not found
  */
 @ApiModel(description = "Not found")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class PutFleetsFleetIdWingsWingIdNotFound {
   @SerializedName("error")
   private String error = null;

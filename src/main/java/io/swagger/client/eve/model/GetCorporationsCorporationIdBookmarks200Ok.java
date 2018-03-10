@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCorporationsCorporationIdBookmarks200Ok {
   @SerializedName("bookmark_id")
   private Integer bookmarkId = null;

@@ -30,7 +30,7 @@ import java.util.List;
  * extractor_details object
  */
 @ApiModel(description = "extractor_details object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails {
   @SerializedName("heads")
   private List<GetCharactersCharacterIdPlanetsPlanetIdHead> heads = new ArrayList<GetCharactersCharacterIdPlanetsPlanetIdHead>();

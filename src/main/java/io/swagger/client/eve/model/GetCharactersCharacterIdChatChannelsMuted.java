@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * muted object
  */
 @ApiModel(description = "muted object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdChatChannelsMuted {
   @SerializedName("accessor_id")
   private Integer accessorId = null;

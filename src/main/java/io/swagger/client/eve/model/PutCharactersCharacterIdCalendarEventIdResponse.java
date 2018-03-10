@@ -27,7 +27,7 @@ import java.io.IOException;
  * response object
  */
 @ApiModel(description = "response object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class PutCharactersCharacterIdCalendarEventIdResponse {
   /**
    * response string

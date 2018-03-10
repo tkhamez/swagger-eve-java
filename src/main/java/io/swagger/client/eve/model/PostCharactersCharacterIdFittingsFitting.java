@@ -30,7 +30,7 @@ import java.util.List;
  * fitting object
  */
 @ApiModel(description = "fitting object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class PostCharactersCharacterIdFittingsFitting {
   @SerializedName("name")
   private String name = null;

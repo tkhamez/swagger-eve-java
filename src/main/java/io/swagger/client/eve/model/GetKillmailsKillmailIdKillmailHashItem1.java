@@ -30,7 +30,7 @@ import java.util.List;
  * item object
  */
 @ApiModel(description = "item object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetKillmailsKillmailIdKillmailHashItem1 {
   @SerializedName("item_type_id")
   private Integer itemTypeId = null;

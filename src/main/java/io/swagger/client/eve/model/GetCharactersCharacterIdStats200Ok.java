@@ -39,7 +39,7 @@ import java.io.IOException;
  * Aggregate stats for a year
  */
 @ApiModel(description = "Aggregate stats for a year")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdStats200Ok {
   @SerializedName("year")
   private Integer year = null;

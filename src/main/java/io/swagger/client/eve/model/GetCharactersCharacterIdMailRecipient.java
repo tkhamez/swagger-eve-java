@@ -27,7 +27,7 @@ import java.io.IOException;
  * recipient object
  */
 @ApiModel(description = "recipient object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdMailRecipient {
   /**
    * recipient_type string

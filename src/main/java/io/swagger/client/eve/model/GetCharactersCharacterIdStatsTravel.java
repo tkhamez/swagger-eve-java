@@ -27,7 +27,7 @@ import java.io.IOException;
  * travel object
  */
 @ApiModel(description = "travel object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetCharactersCharacterIdStatsTravel {
   @SerializedName("acceleration_gate_activations")
   private Long accelerationGateActivations = null;

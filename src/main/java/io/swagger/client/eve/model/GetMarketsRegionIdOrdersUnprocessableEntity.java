@@ -27,7 +27,7 @@ import java.io.IOException;
  * Unprocessable entity
  */
 @ApiModel(description = "Unprocessable entity")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetMarketsRegionIdOrdersUnprocessableEntity {
   @SerializedName("error")
   private String error = null;

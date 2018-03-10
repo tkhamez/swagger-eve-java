@@ -27,7 +27,7 @@ import java.io.IOException;
  * level object
  */
 @ApiModel(description = "level object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetInsurancePricesLevel {
   @SerializedName("cost")
   private Float cost = null;

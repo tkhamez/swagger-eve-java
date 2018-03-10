@@ -29,7 +29,7 @@ import java.util.List;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T21:17:18.195+01:00")
+
 public class GetSearchOk {
   @SerializedName("agent")
   private List<Integer> agent = null;
