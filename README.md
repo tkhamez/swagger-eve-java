@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.tkhamez</groupId>
     <artifactId>swagger-eve-java</artifactId>
-    <version>0.7.5.1</version>
+    <version>0.7.6.1</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.github.tkhamez:swagger-eve-java:0.7.5.1"
+compile "com.github.tkhamez:swagger-eve-java:0.7.6.1"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/swagger-eve-java-0.7.5.1.jar
+* target/swagger-eve-java-0.7.6.1.jar
 * target/lib/*.jar
 
 ## Getting Started
