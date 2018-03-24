@@ -1,0 +1,17 @@
+{
+    "modelPackage" : "io.swagger.client.eve.model",
+    "apiPackage" : "io.swagger.client.eve.api",
+    "invokerPackage" : "io.swagger.client.eve",
+    "hideGenerationTimestamp" : true,
+    "groupId" : "com.github.tkhamez",
+    "artifactId" : "swagger-eve-java",
+    "artifactVersion" : "0.7.6.1",
+    "artifactUrl" : "https://github.com/tkhamez/swagger-eve-java",
+    "artifactDescription" : "EVE Swagger Java Client",
+    "scmConnection" : "scm:git:https://github.com/tkhamez/swagger-eve-java.git",
+    "scmDeveloperConnection" : "scm:git:https://github.com/tkhamez/swagger-eve-java.git",
+    "scmUrl" : "https://github.com/tkhamez/swagger-eve-java",
+    "licenseName" : "MIT License",
+    "licenseUrl" : "http://www.opensource.org/licenses/mit-license.php"
+}
+
