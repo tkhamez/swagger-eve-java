@@ -348,6 +348,8 @@ public class GetCharactersCharacterIdNotifications200Ok {
     
     MOONMININGEXTRACTIONFINISHED("MoonminingExtractionFinished"),
     
+    MOONMININGEXTRACTIONSTARTED("MoonminingExtractionStarted"),
+    
     MOONMININGLASERFIRED("MoonminingLaserFired"),
     
     NPCSTANDINGSGAINED("NPCStandingsGained"),
@@ -442,6 +444,12 @@ public class GetCharactersCharacterIdNotifications200Ok {
     
     STRUCTUREUNDERATTACK("StructureUnderAttack"),
     
+    STRUCTUREWENTHIGHPOWER("StructureWentHighPower"),
+    
+    STRUCTUREWENTLOWPOWER("StructureWentLowPower"),
+    
+    STRUCTURESREINFORCEMENTCHANGED("StructuresReinforcementChanged"),
+    
     TOWERALERTMSG("TowerAlertMsg"),
     
     TOWERRESOURCEALERTMSG("TowerResourceAlertMsg"),
@@ -454,9 +462,7 @@ public class GetCharactersCharacterIdNotifications200Ok {
     
     WARSURRENDERDECLINEDMSG("WarSurrenderDeclinedMsg"),
     
-    WARSURRENDEROFFERMSG("WarSurrenderOfferMsg"),
-    
-    NOTIFICATIONTYPEMOONMININGEXTRACTIONSTARTED("notificationTypeMoonminingExtractionStarted");
+    WARSURRENDEROFFERMSG("WarSurrenderOfferMsg");
 
     private String value;
 

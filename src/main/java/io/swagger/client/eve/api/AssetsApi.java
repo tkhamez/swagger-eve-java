@@ -231,7 +231,7 @@ public class AssetsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v2/corporations/{corporation_id}/assets/"
+        String localVarPath = "/v3/corporations/{corporation_id}/assets/"
             .replaceAll("\\{" + "corporation_id" + "\\}", apiClient.escapeString(corporationId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -295,7 +295,7 @@ public class AssetsApi {
 
     /**
      * Get corporation assets
-     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
+     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
      * @param corporationId An EVE corporation ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param page Which page of results to return (optional, default to 1)
@@ -312,7 +312,7 @@ public class AssetsApi {
 
     /**
      * Get corporation assets
-     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
+     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
      * @param corporationId An EVE corporation ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param page Which page of results to return (optional, default to 1)
@@ -330,7 +330,7 @@ public class AssetsApi {
 
     /**
      * Get corporation assets (asynchronously)
-     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
+     * Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
      * @param corporationId An EVE corporation ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param page Which page of results to return (optional, default to 1)

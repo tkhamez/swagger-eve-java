@@ -252,7 +252,7 @@ public class GetCorporationsCorporationIdContainersLogs200Ok {
     
     HISLOT7("HiSlot7"),
     
-    HIDDENMODIFERS("HiddenModifers"),
+    HIDDENMODIFIERS("HiddenModifiers"),
     
     IMPLANT("Implant"),
     
@@ -384,6 +384,8 @@ public class GetCorporationsCorporationIdContainersLogs200Ok {
     
     STRUCTUREOFFLINE("StructureOffline"),
     
+    SUBSYSTEMBAY("SubSystemBay"),
+    
     SUBSYSTEMSLOT0("SubSystemSlot0"),
     
     SUBSYSTEMSLOT1("SubSystemSlot1"),
@@ -399,8 +401,6 @@ public class GetCorporationsCorporationIdContainersLogs200Ok {
     SUBSYSTEMSLOT6("SubSystemSlot6"),
     
     SUBSYSTEMSLOT7("SubSystemSlot7"),
-    
-    SUBSYSTEMBAY("SubsystemBay"),
     
     UNLOCKED("Unlocked"),
     

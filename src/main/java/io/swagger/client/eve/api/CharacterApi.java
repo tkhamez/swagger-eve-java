@@ -1113,7 +1113,7 @@ public class CharacterApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/characters/{character_id}/notifications/"
+        String localVarPath = "/v2/characters/{character_id}/notifications/"
             .replaceAll("\\{" + "character_id" + "\\}", apiClient.escapeString(characterId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1175,7 +1175,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param token Access token to use if unable to set a header (optional)
@@ -1191,7 +1191,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param token Access token to use if unable to set a header (optional)
@@ -1208,7 +1208,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications (asynchronously)
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param token Access token to use if unable to set a header (optional)

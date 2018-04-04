@@ -1,5 +1,3 @@
-[![](https://jitpack.io/v/tkhamez/swagger-eve-java.svg)](https://jitpack.io/#tkhamez/swagger-eve-java)
-
 # swagger-eve-java
 
 ## Requirements
@@ -30,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.tkhamez</groupId>
     <artifactId>swagger-eve-java</artifactId>
-    <version>0.7.6.1</version>
+    <version>0.7.6.2</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -40,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.github.tkhamez:swagger-eve-java:0.7.6.1"
+compile "com.github.tkhamez:swagger-eve-java:0.7.6.2"
 ```
 
 ### Others
@@ -51,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/swagger-eve-java-0.7.6.1.jar
+* target/swagger-eve-java-0.7.6.2.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -100,7 +98,7 @@ Class | Method | HTTP request | Description
 *AllianceApi* | [**getAlliancesAllianceIdIcons**](docs/AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /v1/alliances/{alliance_id}/icons/ | Get alliance icon
 *AllianceApi* | [**getAlliancesNames**](docs/AllianceApi.md#getAlliancesNames) | **GET** /v2/alliances/names/ | Get alliance names
 *AssetsApi* | [**getCharactersCharacterIdAssets**](docs/AssetsApi.md#getCharactersCharacterIdAssets) | **GET** /v3/characters/{character_id}/assets/ | Get character assets
-*AssetsApi* | [**getCorporationsCorporationIdAssets**](docs/AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /v2/corporations/{corporation_id}/assets/ | Get corporation assets
+*AssetsApi* | [**getCorporationsCorporationIdAssets**](docs/AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /v3/corporations/{corporation_id}/assets/ | Get corporation assets
 *AssetsApi* | [**postCharactersCharacterIdAssetsLocations**](docs/AssetsApi.md#postCharactersCharacterIdAssetsLocations) | **POST** /v2/characters/{character_id}/assets/locations/ | Get character asset locations
 *AssetsApi* | [**postCharactersCharacterIdAssetsNames**](docs/AssetsApi.md#postCharactersCharacterIdAssetsNames) | **POST** /v1/characters/{character_id}/assets/names/ | Get character asset names
 *AssetsApi* | [**postCorporationsCorporationIdAssetsLocations**](docs/AssetsApi.md#postCorporationsCorporationIdAssetsLocations) | **POST** /v2/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
@@ -120,7 +118,7 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdCorporationhistory**](docs/CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
 *CharacterApi* | [**getCharactersCharacterIdFatigue**](docs/CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
 *CharacterApi* | [**getCharactersCharacterIdMedals**](docs/CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
-*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v1/characters/{character_id}/notifications/ | Get character notifications
+*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v2/characters/{character_id}/notifications/ | Get character notifications
 *CharacterApi* | [**getCharactersCharacterIdNotificationsContacts**](docs/CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
@@ -147,8 +145,8 @@ Class | Method | HTTP request | Description
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdItems**](docs/ContractsApi.md#getCorporationsCorporationIdContractsContractIdItems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
 *CorporationApi* | [**getCorporationsCorporationId**](docs/CorporationApi.md#getCorporationsCorporationId) | **GET** /v4/corporations/{corporation_id}/ | Get corporation information
 *CorporationApi* | [**getCorporationsCorporationIdAlliancehistory**](docs/CorporationApi.md#getCorporationsCorporationIdAlliancehistory) | **GET** /v2/corporations/{corporation_id}/alliancehistory/ | Get alliance history
-*CorporationApi* | [**getCorporationsCorporationIdBlueprints**](docs/CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v1/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
-*CorporationApi* | [**getCorporationsCorporationIdContainersLogs**](docs/CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v1/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
+*CorporationApi* | [**getCorporationsCorporationIdBlueprints**](docs/CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v2/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
+*CorporationApi* | [**getCorporationsCorporationIdContainersLogs**](docs/CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v2/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
 *CorporationApi* | [**getCorporationsCorporationIdDivisions**](docs/CorporationApi.md#getCorporationsCorporationIdDivisions) | **GET** /v1/corporations/{corporation_id}/divisions/ | Get corporation divisions
 *CorporationApi* | [**getCorporationsCorporationIdFacilities**](docs/CorporationApi.md#getCorporationsCorporationIdFacilities) | **GET** /v1/corporations/{corporation_id}/facilities/ | Get corporation facilities
 *CorporationApi* | [**getCorporationsCorporationIdIcons**](docs/CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /v1/corporations/{corporation_id}/icons/ | Get corporation icon
