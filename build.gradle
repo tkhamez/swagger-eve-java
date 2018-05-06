@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.github.tkhamez'
-version = '0.7.6.2'
+version = '0.8.1.1'
 
 buildscript {
     repositories {

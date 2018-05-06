@@ -5,7 +5,7 @@
     <artifactId>swagger-eve-java</artifactId>
     <packaging>jar</packaging>
     <name>swagger-eve-java</name>
-    <version>0.7.6.2</version>
+    <version>0.8.1.1</version>
     <url>https://github.com/tkhamez/swagger-eve-java</url>
     <description>EVE Swagger Java Client</description>
     <scm>
