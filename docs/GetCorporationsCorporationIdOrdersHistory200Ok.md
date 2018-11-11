@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **escrow** | **Double** | For buy orders, the amount of ISK in escrow |  [optional]
 **isBuyOrder** | **Boolean** | True if the order is a bid (buy) order |  [optional]
 **issued** | [**OffsetDateTime**](OffsetDateTime.md) | Date and time when this order was issued | 
+**issuedBy** | **Integer** | The character who issued this order |  [optional]
 **locationId** | **Long** | ID of the location where order was placed | 
 **minVolume** | **Integer** | For buy orders, the minimum quantity that will be accepted in a matching sell order |  [optional]
 **orderId** | **Long** | Unique order ID | 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 **typeId** | **Integer** | The type ID of the item transacted in this order | 
 **volumeRemain** | **Integer** | Quantity of items still required or offered | 
 **volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
-**walletDivision** | **Integer** | The corporation wallet division used for this order. | 
+**walletDivision** | **Integer** | The corporation wallet division used for this order | 
 
 
 <a name="RangeEnum"></a>

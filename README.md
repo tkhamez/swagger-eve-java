@@ -1,5 +1,3 @@
-[![](https://jitpack.io/v/tkhamez/swagger-eve-java.svg)](https://jitpack.io/#tkhamez/swagger-eve-java)
-
 # swagger-eve-java
 
 ## Requirements
@@ -75,10 +73,8 @@ public class AllianceApiExample {
         AllianceApi apiInstance = new AllianceApi();
         String datasource = "tranquility"; // String | The server name you would like data from
         String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-        String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-        String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
         try {
-            List<Integer> result = apiInstance.getAlliances(datasource, ifNoneMatch, userAgent, xUserAgent);
+            List<Integer> result = apiInstance.getAlliances(datasource, ifNoneMatch);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling AllianceApi#getAlliances");
@@ -99,13 +95,12 @@ Class | Method | HTTP request | Description
 *AllianceApi* | [**getAlliancesAllianceId**](docs/AllianceApi.md#getAlliancesAllianceId) | **GET** /v3/alliances/{alliance_id}/ | Get alliance information
 *AllianceApi* | [**getAlliancesAllianceIdCorporations**](docs/AllianceApi.md#getAlliancesAllianceIdCorporations) | **GET** /v1/alliances/{alliance_id}/corporations/ | List alliance&#39;s corporations
 *AllianceApi* | [**getAlliancesAllianceIdIcons**](docs/AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /v1/alliances/{alliance_id}/icons/ | Get alliance icon
-*AllianceApi* | [**getAlliancesNames**](docs/AllianceApi.md#getAlliancesNames) | **GET** /v2/alliances/names/ | Get alliance names
 *AssetsApi* | [**getCharactersCharacterIdAssets**](docs/AssetsApi.md#getCharactersCharacterIdAssets) | **GET** /v3/characters/{character_id}/assets/ | Get character assets
 *AssetsApi* | [**getCorporationsCorporationIdAssets**](docs/AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /v3/corporations/{corporation_id}/assets/ | Get corporation assets
 *AssetsApi* | [**postCharactersCharacterIdAssetsLocations**](docs/AssetsApi.md#postCharactersCharacterIdAssetsLocations) | **POST** /v2/characters/{character_id}/assets/locations/ | Get character asset locations
 *AssetsApi* | [**postCharactersCharacterIdAssetsNames**](docs/AssetsApi.md#postCharactersCharacterIdAssetsNames) | **POST** /v1/characters/{character_id}/assets/names/ | Get character asset names
 *AssetsApi* | [**postCorporationsCorporationIdAssetsLocations**](docs/AssetsApi.md#postCorporationsCorporationIdAssetsLocations) | **POST** /v2/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
-*AssetsApi* | [**postCorporationsCorporationIdAssetsNames**](docs/AssetsApi.md#postCorporationsCorporationIdAssetsNames) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get coporation asset names
+*AssetsApi* | [**postCorporationsCorporationIdAssetsNames**](docs/AssetsApi.md#postCorporationsCorporationIdAssetsNames) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get corporation asset names
 *BookmarksApi* | [**getCharactersCharacterIdBookmarks**](docs/BookmarksApi.md#getCharactersCharacterIdBookmarks) | **GET** /v2/characters/{character_id}/bookmarks/ | List bookmarks
 *BookmarksApi* | [**getCharactersCharacterIdBookmarksFolders**](docs/BookmarksApi.md#getCharactersCharacterIdBookmarksFolders) | **GET** /v2/characters/{character_id}/bookmarks/folders/ | List bookmark folders
 *BookmarksApi* | [**getCorporationsCorporationIdBookmarks**](docs/BookmarksApi.md#getCorporationsCorporationIdBookmarks) | **GET** /v1/corporations/{corporation_id}/bookmarks/ | List corporation bookmarks
@@ -120,31 +115,33 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdCorporationhistory**](docs/CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
 *CharacterApi* | [**getCharactersCharacterIdFatigue**](docs/CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
 *CharacterApi* | [**getCharactersCharacterIdMedals**](docs/CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
-*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v2/characters/{character_id}/notifications/ | Get character notifications
+*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v3/characters/{character_id}/notifications/ | Get character notifications
 *CharacterApi* | [**getCharactersCharacterIdNotificationsContacts**](docs/CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
 *CharacterApi* | [**getCharactersCharacterIdStandings**](docs/CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
 *CharacterApi* | [**getCharactersCharacterIdStats**](docs/CharacterApi.md#getCharactersCharacterIdStats) | **GET** /v2/characters/{character_id}/stats/ | Yearly aggregate stats
 *CharacterApi* | [**getCharactersCharacterIdTitles**](docs/CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
-*CharacterApi* | [**getCharactersNames**](docs/CharacterApi.md#getCharactersNames) | **GET** /v1/characters/names/ | Get character names
 *CharacterApi* | [**postCharactersAffiliation**](docs/CharacterApi.md#postCharactersAffiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
 *CharacterApi* | [**postCharactersCharacterIdCspa**](docs/CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /v4/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
 *ClonesApi* | [**getCharactersCharacterIdClones**](docs/ClonesApi.md#getCharactersCharacterIdClones) | **GET** /v3/characters/{character_id}/clones/ | Get clones
 *ClonesApi* | [**getCharactersCharacterIdImplants**](docs/ClonesApi.md#getCharactersCharacterIdImplants) | **GET** /v1/characters/{character_id}/implants/ | Get active implants
 *ContactsApi* | [**deleteCharactersCharacterIdContacts**](docs/ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
-*ContactsApi* | [**getAlliancesAllianceIdContacts**](docs/ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+*ContactsApi* | [**getAlliancesAllianceIdContacts**](docs/ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v2/alliances/{alliance_id}/contacts/ | Get alliance contacts
 *ContactsApi* | [**getAlliancesAllianceIdContactsLabels**](docs/ContactsApi.md#getAlliancesAllianceIdContactsLabels) | **GET** /v1/alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
-*ContactsApi* | [**getCharactersCharacterIdContacts**](docs/ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
+*ContactsApi* | [**getCharactersCharacterIdContacts**](docs/ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v2/characters/{character_id}/contacts/ | Get contacts
 *ContactsApi* | [**getCharactersCharacterIdContactsLabels**](docs/ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
-*ContactsApi* | [**getCorporationsCorporationIdContacts**](docs/ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+*ContactsApi* | [**getCorporationsCorporationIdContacts**](docs/ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v2/corporations/{corporation_id}/contacts/ | Get corporation contacts
 *ContactsApi* | [**getCorporationsCorporationIdContactsLabels**](docs/ContactsApi.md#getCorporationsCorporationIdContactsLabels) | **GET** /v1/corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
-*ContactsApi* | [**postCharactersCharacterIdContacts**](docs/ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
-*ContactsApi* | [**putCharactersCharacterIdContacts**](docs/ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
+*ContactsApi* | [**postCharactersCharacterIdContacts**](docs/ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v2/characters/{character_id}/contacts/ | Add contacts
+*ContactsApi* | [**putCharactersCharacterIdContacts**](docs/ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v2/characters/{character_id}/contacts/ | Edit contacts
 *ContractsApi* | [**getCharactersCharacterIdContracts**](docs/ContractsApi.md#getCharactersCharacterIdContracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdBids**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdBids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdItems**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdItems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
-*ContractsApi* | [**getCorporationsCorporationIdContracts**](docs/ContractsApi.md#getCorporationsCorporationIdContracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get coporation contracts
+*ContractsApi* | [**getContractsPublicBidsContractId**](docs/ContractsApi.md#getContractsPublicBidsContractId) | **GET** /v1/contracts/public/bids/{contract_id}/ | Get public contract bids
+*ContractsApi* | [**getContractsPublicItemsContractId**](docs/ContractsApi.md#getContractsPublicItemsContractId) | **GET** /v1/contracts/public/items/{contract_id}/ | Get public contract items
+*ContractsApi* | [**getContractsPublicRegionId**](docs/ContractsApi.md#getContractsPublicRegionId) | **GET** /v1/contracts/public/{region_id}/ | Get public contracts
+*ContractsApi* | [**getCorporationsCorporationIdContracts**](docs/ContractsApi.md#getCorporationsCorporationIdContracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdBids**](docs/ContractsApi.md#getCorporationsCorporationIdContractsContractIdBids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdItems**](docs/ContractsApi.md#getCorporationsCorporationIdContractsContractIdItems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
 *CorporationApi* | [**getCorporationsCorporationId**](docs/CorporationApi.md#getCorporationsCorporationId) | **GET** /v4/corporations/{corporation_id}/ | Get corporation information
@@ -160,8 +157,6 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdMembersLimit**](docs/CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 *CorporationApi* | [**getCorporationsCorporationIdMembersTitles**](docs/CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 *CorporationApi* | [**getCorporationsCorporationIdMembertracking**](docs/CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
-*CorporationApi* | [**getCorporationsCorporationIdOutposts**](docs/CorporationApi.md#getCorporationsCorporationIdOutposts) | **GET** /v1/corporations/{corporation_id}/outposts/ | Get corporation outposts
-*CorporationApi* | [**getCorporationsCorporationIdOutpostsOutpostId**](docs/CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 *CorporationApi* | [**getCorporationsCorporationIdRoles**](docs/CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 *CorporationApi* | [**getCorporationsCorporationIdRolesHistory**](docs/CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 *CorporationApi* | [**getCorporationsCorporationIdShareholders**](docs/CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation shareholders
@@ -170,10 +165,10 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdStarbasesStarbaseId**](docs/CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
 *CorporationApi* | [**getCorporationsCorporationIdStructures**](docs/CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
 *CorporationApi* | [**getCorporationsCorporationIdTitles**](docs/CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
-*CorporationApi* | [**getCorporationsNames**](docs/CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 *CorporationApi* | [**getCorporationsNpccorps**](docs/CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 *DogmaApi* | [**getDogmaAttributes**](docs/DogmaApi.md#getDogmaAttributes) | **GET** /v1/dogma/attributes/ | Get attributes
 *DogmaApi* | [**getDogmaAttributesAttributeId**](docs/DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /v1/dogma/attributes/{attribute_id}/ | Get attribute information
+*DogmaApi* | [**getDogmaDynamicItemsTypeIdItemId**](docs/DogmaApi.md#getDogmaDynamicItemsTypeIdItemId) | **GET** /v1/dogma/dynamic/items/{type_id}/{item_id}/ | Get dynamic item information
 *DogmaApi* | [**getDogmaEffects**](docs/DogmaApi.md#getDogmaEffects) | **GET** /v1/dogma/effects/ | Get effects
 *DogmaApi* | [**getDogmaEffectsEffectId**](docs/DogmaApi.md#getDogmaEffectsEffectId) | **GET** /v2/dogma/effects/{effect_id}/ | Get effect information
 *FactionWarfareApi* | [**getCharactersCharacterIdFwStats**](docs/FactionWarfareApi.md#getCharactersCharacterIdFwStats) | **GET** /v1/characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
@@ -182,7 +177,7 @@ Class | Method | HTTP request | Description
 *FactionWarfareApi* | [**getFwLeaderboardsCharacters**](docs/FactionWarfareApi.md#getFwLeaderboardsCharacters) | **GET** /v1/fw/leaderboards/characters/ | List of the top pilots in faction warfare
 *FactionWarfareApi* | [**getFwLeaderboardsCorporations**](docs/FactionWarfareApi.md#getFwLeaderboardsCorporations) | **GET** /v1/fw/leaderboards/corporations/ | List of the top corporations in faction warfare
 *FactionWarfareApi* | [**getFwStats**](docs/FactionWarfareApi.md#getFwStats) | **GET** /v1/fw/stats/ | An overview of statistics about factions involved in faction warfare
-*FactionWarfareApi* | [**getFwSystems**](docs/FactionWarfareApi.md#getFwSystems) | **GET** /v1/fw/systems/ | Ownership of faction warfare systems
+*FactionWarfareApi* | [**getFwSystems**](docs/FactionWarfareApi.md#getFwSystems) | **GET** /v2/fw/systems/ | Ownership of faction warfare systems
 *FactionWarfareApi* | [**getFwWars**](docs/FactionWarfareApi.md#getFwWars) | **GET** /v1/fw/wars/ | Data about which NPC factions are at war
 *FittingsApi* | [**deleteCharactersCharacterIdFittingsFittingId**](docs/FittingsApi.md#deleteCharactersCharacterIdFittingsFittingId) | **DELETE** /v1/characters/{character_id}/fittings/{fitting_id}/ | Delete fitting
 *FittingsApi* | [**getCharactersCharacterIdFittings**](docs/FittingsApi.md#getCharactersCharacterIdFittings) | **GET** /v1/characters/{character_id}/fittings/ | Get fittings
@@ -211,8 +206,8 @@ Class | Method | HTTP request | Description
 *IndustryApi* | [**getIndustryFacilities**](docs/IndustryApi.md#getIndustryFacilities) | **GET** /v1/industry/facilities/ | List industry facilities
 *IndustryApi* | [**getIndustrySystems**](docs/IndustryApi.md#getIndustrySystems) | **GET** /v1/industry/systems/ | List solar system cost indices
 *InsuranceApi* | [**getInsurancePrices**](docs/InsuranceApi.md#getInsurancePrices) | **GET** /v1/insurance/prices/ | List insurance levels
-*KillmailsApi* | [**getCharactersCharacterIdKillmailsRecent**](docs/KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get character kills and losses
-*KillmailsApi* | [**getCorporationsCorporationIdKillmailsRecent**](docs/KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+*KillmailsApi* | [**getCharactersCharacterIdKillmailsRecent**](docs/KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get a character&#39;s recent kills and losses
+*KillmailsApi* | [**getCorporationsCorporationIdKillmailsRecent**](docs/KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get a corporation&#39;s recent kills and losses
 *KillmailsApi* | [**getKillmailsKillmailIdKillmailHash**](docs/KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /v1/killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 *LocationApi* | [**getCharactersCharacterIdLocation**](docs/LocationApi.md#getCharactersCharacterIdLocation) | **GET** /v1/characters/{character_id}/location/ | Get character location
 *LocationApi* | [**getCharactersCharacterIdOnline**](docs/LocationApi.md#getCharactersCharacterIdOnline) | **GET** /v2/characters/{character_id}/online/ | Get character online
@@ -230,8 +225,8 @@ Class | Method | HTTP request | Description
 *MailApi* | [**putCharactersCharacterIdMailMailId**](docs/MailApi.md#putCharactersCharacterIdMailMailId) | **PUT** /v1/characters/{character_id}/mail/{mail_id}/ | Update metadata about a mail
 *MarketApi* | [**getCharactersCharacterIdOrders**](docs/MarketApi.md#getCharactersCharacterIdOrders) | **GET** /v2/characters/{character_id}/orders/ | List open orders from a character
 *MarketApi* | [**getCharactersCharacterIdOrdersHistory**](docs/MarketApi.md#getCharactersCharacterIdOrdersHistory) | **GET** /v1/characters/{character_id}/orders/history/ | List historical orders by a character
-*MarketApi* | [**getCorporationsCorporationIdOrders**](docs/MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v2/corporations/{corporation_id}/orders/ | List open orders from a corporation
-*MarketApi* | [**getCorporationsCorporationIdOrdersHistory**](docs/MarketApi.md#getCorporationsCorporationIdOrdersHistory) | **GET** /v1/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
+*MarketApi* | [**getCorporationsCorporationIdOrders**](docs/MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v3/corporations/{corporation_id}/orders/ | List open orders from a corporation
+*MarketApi* | [**getCorporationsCorporationIdOrdersHistory**](docs/MarketApi.md#getCorporationsCorporationIdOrdersHistory) | **GET** /v2/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
 *MarketApi* | [**getMarketsGroups**](docs/MarketApi.md#getMarketsGroups) | **GET** /v1/markets/groups/ | Get item groups
 *MarketApi* | [**getMarketsGroupsMarketGroupId**](docs/MarketApi.md#getMarketsGroupsMarketGroupId) | **GET** /v1/markets/groups/{market_group_id}/ | Get item group information
 *MarketApi* | [**getMarketsPrices**](docs/MarketApi.md#getMarketsPrices) | **GET** /v1/markets/prices/ | List market prices
@@ -279,11 +274,11 @@ Class | Method | HTTP request | Description
 *UniverseApi* | [**getUniverseStarsStarId**](docs/UniverseApi.md#getUniverseStarsStarId) | **GET** /v1/universe/stars/{star_id}/ | Get star information
 *UniverseApi* | [**getUniverseStationsStationId**](docs/UniverseApi.md#getUniverseStationsStationId) | **GET** /v2/universe/stations/{station_id}/ | Get station information
 *UniverseApi* | [**getUniverseStructures**](docs/UniverseApi.md#getUniverseStructures) | **GET** /v1/universe/structures/ | List all public structures
-*UniverseApi* | [**getUniverseStructuresStructureId**](docs/UniverseApi.md#getUniverseStructuresStructureId) | **GET** /v1/universe/structures/{structure_id}/ | Get structure information
+*UniverseApi* | [**getUniverseStructuresStructureId**](docs/UniverseApi.md#getUniverseStructuresStructureId) | **GET** /v2/universe/structures/{structure_id}/ | Get structure information
 *UniverseApi* | [**getUniverseSystemJumps**](docs/UniverseApi.md#getUniverseSystemJumps) | **GET** /v1/universe/system_jumps/ | Get system jumps
 *UniverseApi* | [**getUniverseSystemKills**](docs/UniverseApi.md#getUniverseSystemKills) | **GET** /v2/universe/system_kills/ | Get system kills
 *UniverseApi* | [**getUniverseSystems**](docs/UniverseApi.md#getUniverseSystems) | **GET** /v1/universe/systems/ | Get solar systems
-*UniverseApi* | [**getUniverseSystemsSystemId**](docs/UniverseApi.md#getUniverseSystemsSystemId) | **GET** /v3/universe/systems/{system_id}/ | Get solar system information
+*UniverseApi* | [**getUniverseSystemsSystemId**](docs/UniverseApi.md#getUniverseSystemsSystemId) | **GET** /v4/universe/systems/{system_id}/ | Get solar system information
 *UniverseApi* | [**getUniverseTypes**](docs/UniverseApi.md#getUniverseTypes) | **GET** /v1/universe/types/ | Get types
 *UniverseApi* | [**getUniverseTypesTypeId**](docs/UniverseApi.md#getUniverseTypesTypeId) | **GET** /v3/universe/types/{type_id}/ | Get type information
 *UniverseApi* | [**postUniverseIds**](docs/UniverseApi.md#postUniverseIds) | **POST** /v1/universe/ids/ | Bulk names to IDs
@@ -306,20 +301,20 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [BadGateway](docs/BadGateway.md)
  - [BadRequest](docs/BadRequest.md)
  - [DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity](docs/DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity.md)
  - [DeleteFleetsFleetIdMembersMemberIdNotFound](docs/DeleteFleetsFleetIdMembersMemberIdNotFound.md)
  - [DeleteFleetsFleetIdSquadsSquadIdNotFound](docs/DeleteFleetsFleetIdSquadsSquadIdNotFound.md)
  - [DeleteFleetsFleetIdWingsWingIdNotFound](docs/DeleteFleetsFleetIdWingsWingIdNotFound.md)
+ - [ErrorLimited](docs/ErrorLimited.md)
  - [Forbidden](docs/Forbidden.md)
+ - [GatewayTimeout](docs/GatewayTimeout.md)
  - [GetAlliancesAllianceIdContacts200Ok](docs/GetAlliancesAllianceIdContacts200Ok.md)
  - [GetAlliancesAllianceIdContactsLabels200Ok](docs/GetAlliancesAllianceIdContactsLabels200Ok.md)
  - [GetAlliancesAllianceIdIconsNotFound](docs/GetAlliancesAllianceIdIconsNotFound.md)
  - [GetAlliancesAllianceIdIconsOk](docs/GetAlliancesAllianceIdIconsOk.md)
  - [GetAlliancesAllianceIdNotFound](docs/GetAlliancesAllianceIdNotFound.md)
  - [GetAlliancesAllianceIdOk](docs/GetAlliancesAllianceIdOk.md)
- - [GetAlliancesNames200Ok](docs/GetAlliancesNames200Ok.md)
  - [GetCharactersCharacterIdAgentsResearch200Ok](docs/GetCharactersCharacterIdAgentsResearch200Ok.md)
  - [GetCharactersCharacterIdAssets200Ok](docs/GetCharactersCharacterIdAssets200Ok.md)
  - [GetCharactersCharacterIdAttributesOk](docs/GetCharactersCharacterIdAttributesOk.md)
@@ -410,7 +405,14 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdTitles200Ok](docs/GetCharactersCharacterIdTitles200Ok.md)
  - [GetCharactersCharacterIdWalletJournal200Ok](docs/GetCharactersCharacterIdWalletJournal200Ok.md)
  - [GetCharactersCharacterIdWalletTransactions200Ok](docs/GetCharactersCharacterIdWalletTransactions200Ok.md)
- - [GetCharactersNames200Ok](docs/GetCharactersNames200Ok.md)
+ - [GetContractsPublicBidsContractId200Ok](docs/GetContractsPublicBidsContractId200Ok.md)
+ - [GetContractsPublicBidsContractIdForbidden](docs/GetContractsPublicBidsContractIdForbidden.md)
+ - [GetContractsPublicBidsContractIdNotFound](docs/GetContractsPublicBidsContractIdNotFound.md)
+ - [GetContractsPublicItemsContractId200Ok](docs/GetContractsPublicItemsContractId200Ok.md)
+ - [GetContractsPublicItemsContractIdForbidden](docs/GetContractsPublicItemsContractIdForbidden.md)
+ - [GetContractsPublicItemsContractIdNotFound](docs/GetContractsPublicItemsContractIdNotFound.md)
+ - [GetContractsPublicRegionId200Ok](docs/GetContractsPublicRegionId200Ok.md)
+ - [GetContractsPublicRegionIdNotFound](docs/GetContractsPublicRegionIdNotFound.md)
  - [GetCorporationCorporationIdMiningExtractions200Ok](docs/GetCorporationCorporationIdMiningExtractions200Ok.md)
  - [GetCorporationCorporationIdMiningObservers200Ok](docs/GetCorporationCorporationIdMiningObservers200Ok.md)
  - [GetCorporationCorporationIdMiningObserversObserverId200Ok](docs/GetCorporationCorporationIdMiningObserversObserverId200Ok.md)
@@ -428,12 +430,12 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdContractsContractIdBids200Ok](docs/GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
  - [GetCorporationsCorporationIdContractsContractIdBidsNotFound](docs/GetCorporationsCorporationIdContractsContractIdBidsNotFound.md)
  - [GetCorporationsCorporationIdContractsContractIdItems200Ok](docs/GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
- - [GetCorporationsCorporationIdContractsContractIdItems520Response](docs/GetCorporationsCorporationIdContractsContractIdItems520Response.md)
+ - [GetCorporationsCorporationIdContractsContractIdItemsError520](docs/GetCorporationsCorporationIdContractsContractIdItemsError520.md)
  - [GetCorporationsCorporationIdContractsContractIdItemsNotFound](docs/GetCorporationsCorporationIdContractsContractIdItemsNotFound.md)
  - [GetCorporationsCorporationIdCustomsOffices200Ok](docs/GetCorporationsCorporationIdCustomsOffices200Ok.md)
- - [GetCorporationsCorporationIdDivisionsHangar](docs/GetCorporationsCorporationIdDivisionsHangar.md)
+ - [GetCorporationsCorporationIdDivisionsHangarHangar](docs/GetCorporationsCorporationIdDivisionsHangarHangar.md)
  - [GetCorporationsCorporationIdDivisionsOk](docs/GetCorporationsCorporationIdDivisionsOk.md)
- - [GetCorporationsCorporationIdDivisionsWallet](docs/GetCorporationsCorporationIdDivisionsWallet.md)
+ - [GetCorporationsCorporationIdDivisionsWalletWallet](docs/GetCorporationsCorporationIdDivisionsWalletWallet.md)
  - [GetCorporationsCorporationIdFacilities200Ok](docs/GetCorporationsCorporationIdFacilities200Ok.md)
  - [GetCorporationsCorporationIdFwStatsKills](docs/GetCorporationsCorporationIdFwStatsKills.md)
  - [GetCorporationsCorporationIdFwStatsOk](docs/GetCorporationsCorporationIdFwStatsOk.md)
@@ -450,9 +452,6 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdOk](docs/GetCorporationsCorporationIdOk.md)
  - [GetCorporationsCorporationIdOrders200Ok](docs/GetCorporationsCorporationIdOrders200Ok.md)
  - [GetCorporationsCorporationIdOrdersHistory200Ok](docs/GetCorporationsCorporationIdOrdersHistory200Ok.md)
- - [GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
- - [GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
- - [GetCorporationsCorporationIdOutpostsOutpostIdService](docs/GetCorporationsCorporationIdOutpostsOutpostIdService.md)
  - [GetCorporationsCorporationIdRoles200Ok](docs/GetCorporationsCorporationIdRoles200Ok.md)
  - [GetCorporationsCorporationIdRolesHistory200Ok](docs/GetCorporationsCorporationIdRolesHistory200Ok.md)
  - [GetCorporationsCorporationIdShareholders200Ok](docs/GetCorporationsCorporationIdShareholders200Ok.md)
@@ -466,9 +465,12 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdWallets200Ok](docs/GetCorporationsCorporationIdWallets200Ok.md)
  - [GetCorporationsCorporationIdWalletsDivisionJournal200Ok](docs/GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
  - [GetCorporationsCorporationIdWalletsDivisionTransactions200Ok](docs/GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
- - [GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
  - [GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
  - [GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdDogmaEffect](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaEffect.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdNotFound](docs/GetDogmaDynamicItemsTypeIdItemIdNotFound.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdOk](docs/GetDogmaDynamicItemsTypeIdItemIdOk.md)
  - [GetDogmaEffectsEffectIdModifier](docs/GetDogmaEffectsEffectIdModifier.md)
  - [GetDogmaEffectsEffectIdNotFound](docs/GetDogmaEffectsEffectIdNotFound.md)
  - [GetDogmaEffectsEffectIdOk](docs/GetDogmaEffectsEffectIdOk.md)
@@ -479,33 +481,33 @@ Class | Method | HTTP request | Description
  - [GetFleetsFleetIdWings200Ok](docs/GetFleetsFleetIdWings200Ok.md)
  - [GetFleetsFleetIdWingsNotFound](docs/GetFleetsFleetIdWingsNotFound.md)
  - [GetFleetsFleetIdWingsSquad](docs/GetFleetsFleetIdWingsSquad.md)
- - [GetFwLeaderboardsActiveTotal](docs/GetFwLeaderboardsActiveTotal.md)
- - [GetFwLeaderboardsActiveTotal1](docs/GetFwLeaderboardsActiveTotal1.md)
- - [GetFwLeaderboardsCharactersActiveTotal](docs/GetFwLeaderboardsCharactersActiveTotal.md)
- - [GetFwLeaderboardsCharactersActiveTotal1](docs/GetFwLeaderboardsCharactersActiveTotal1.md)
+ - [GetFwLeaderboardsActiveTotalActiveTotal](docs/GetFwLeaderboardsActiveTotalActiveTotal.md)
+ - [GetFwLeaderboardsActiveTotalActiveTotal1](docs/GetFwLeaderboardsActiveTotalActiveTotal1.md)
+ - [GetFwLeaderboardsCharactersActiveTotalActiveTotal](docs/GetFwLeaderboardsCharactersActiveTotalActiveTotal.md)
+ - [GetFwLeaderboardsCharactersActiveTotalActiveTotal1](docs/GetFwLeaderboardsCharactersActiveTotalActiveTotal1.md)
  - [GetFwLeaderboardsCharactersKills](docs/GetFwLeaderboardsCharactersKills.md)
- - [GetFwLeaderboardsCharactersLastWeek](docs/GetFwLeaderboardsCharactersLastWeek.md)
- - [GetFwLeaderboardsCharactersLastWeek1](docs/GetFwLeaderboardsCharactersLastWeek1.md)
+ - [GetFwLeaderboardsCharactersLastWeekLastWeek](docs/GetFwLeaderboardsCharactersLastWeekLastWeek.md)
+ - [GetFwLeaderboardsCharactersLastWeekLastWeek1](docs/GetFwLeaderboardsCharactersLastWeekLastWeek1.md)
  - [GetFwLeaderboardsCharactersOk](docs/GetFwLeaderboardsCharactersOk.md)
  - [GetFwLeaderboardsCharactersVictoryPoints](docs/GetFwLeaderboardsCharactersVictoryPoints.md)
- - [GetFwLeaderboardsCharactersYesterday](docs/GetFwLeaderboardsCharactersYesterday.md)
- - [GetFwLeaderboardsCharactersYesterday1](docs/GetFwLeaderboardsCharactersYesterday1.md)
- - [GetFwLeaderboardsCorporationsActiveTotal](docs/GetFwLeaderboardsCorporationsActiveTotal.md)
- - [GetFwLeaderboardsCorporationsActiveTotal1](docs/GetFwLeaderboardsCorporationsActiveTotal1.md)
+ - [GetFwLeaderboardsCharactersYesterdayYesterday](docs/GetFwLeaderboardsCharactersYesterdayYesterday.md)
+ - [GetFwLeaderboardsCharactersYesterdayYesterday1](docs/GetFwLeaderboardsCharactersYesterdayYesterday1.md)
+ - [GetFwLeaderboardsCorporationsActiveTotalActiveTotal](docs/GetFwLeaderboardsCorporationsActiveTotalActiveTotal.md)
+ - [GetFwLeaderboardsCorporationsActiveTotalActiveTotal1](docs/GetFwLeaderboardsCorporationsActiveTotalActiveTotal1.md)
  - [GetFwLeaderboardsCorporationsKills](docs/GetFwLeaderboardsCorporationsKills.md)
- - [GetFwLeaderboardsCorporationsLastWeek](docs/GetFwLeaderboardsCorporationsLastWeek.md)
- - [GetFwLeaderboardsCorporationsLastWeek1](docs/GetFwLeaderboardsCorporationsLastWeek1.md)
+ - [GetFwLeaderboardsCorporationsLastWeekLastWeek](docs/GetFwLeaderboardsCorporationsLastWeekLastWeek.md)
+ - [GetFwLeaderboardsCorporationsLastWeekLastWeek1](docs/GetFwLeaderboardsCorporationsLastWeekLastWeek1.md)
  - [GetFwLeaderboardsCorporationsOk](docs/GetFwLeaderboardsCorporationsOk.md)
  - [GetFwLeaderboardsCorporationsVictoryPoints](docs/GetFwLeaderboardsCorporationsVictoryPoints.md)
- - [GetFwLeaderboardsCorporationsYesterday](docs/GetFwLeaderboardsCorporationsYesterday.md)
- - [GetFwLeaderboardsCorporationsYesterday1](docs/GetFwLeaderboardsCorporationsYesterday1.md)
+ - [GetFwLeaderboardsCorporationsYesterdayYesterday](docs/GetFwLeaderboardsCorporationsYesterdayYesterday.md)
+ - [GetFwLeaderboardsCorporationsYesterdayYesterday1](docs/GetFwLeaderboardsCorporationsYesterdayYesterday1.md)
  - [GetFwLeaderboardsKills](docs/GetFwLeaderboardsKills.md)
- - [GetFwLeaderboardsLastWeek](docs/GetFwLeaderboardsLastWeek.md)
- - [GetFwLeaderboardsLastWeek1](docs/GetFwLeaderboardsLastWeek1.md)
+ - [GetFwLeaderboardsLastWeekLastWeek](docs/GetFwLeaderboardsLastWeekLastWeek.md)
+ - [GetFwLeaderboardsLastWeekLastWeek1](docs/GetFwLeaderboardsLastWeekLastWeek1.md)
  - [GetFwLeaderboardsOk](docs/GetFwLeaderboardsOk.md)
  - [GetFwLeaderboardsVictoryPoints](docs/GetFwLeaderboardsVictoryPoints.md)
- - [GetFwLeaderboardsYesterday](docs/GetFwLeaderboardsYesterday.md)
- - [GetFwLeaderboardsYesterday1](docs/GetFwLeaderboardsYesterday1.md)
+ - [GetFwLeaderboardsYesterdayYesterday](docs/GetFwLeaderboardsYesterdayYesterday.md)
+ - [GetFwLeaderboardsYesterdayYesterday1](docs/GetFwLeaderboardsYesterdayYesterday1.md)
  - [GetFwStats200Ok](docs/GetFwStats200Ok.md)
  - [GetFwStatsKills](docs/GetFwStatsKills.md)
  - [GetFwStatsVictoryPoints](docs/GetFwStatsVictoryPoints.md)
@@ -519,7 +521,7 @@ Class | Method | HTTP request | Description
  - [GetInsurancePricesLevel](docs/GetInsurancePricesLevel.md)
  - [GetKillmailsKillmailIdKillmailHashAttacker](docs/GetKillmailsKillmailIdKillmailHashAttacker.md)
  - [GetKillmailsKillmailIdKillmailHashItem](docs/GetKillmailsKillmailIdKillmailHashItem.md)
- - [GetKillmailsKillmailIdKillmailHashItem1](docs/GetKillmailsKillmailIdKillmailHashItem1.md)
+ - [GetKillmailsKillmailIdKillmailHashItemsItem](docs/GetKillmailsKillmailIdKillmailHashItemsItem.md)
  - [GetKillmailsKillmailIdKillmailHashOk](docs/GetKillmailsKillmailIdKillmailHashOk.md)
  - [GetKillmailsKillmailIdKillmailHashPosition](docs/GetKillmailsKillmailIdKillmailHashPosition.md)
  - [GetKillmailsKillmailIdKillmailHashUnprocessableEntity](docs/GetKillmailsKillmailIdKillmailHashUnprocessableEntity.md)
@@ -531,7 +533,7 @@ Class | Method | HTTP request | Description
  - [GetMarketsGroupsMarketGroupIdOk](docs/GetMarketsGroupsMarketGroupIdOk.md)
  - [GetMarketsPrices200Ok](docs/GetMarketsPrices200Ok.md)
  - [GetMarketsRegionIdHistory200Ok](docs/GetMarketsRegionIdHistory200Ok.md)
- - [GetMarketsRegionIdHistory520Response](docs/GetMarketsRegionIdHistory520Response.md)
+ - [GetMarketsRegionIdHistoryError520](docs/GetMarketsRegionIdHistoryError520.md)
  - [GetMarketsRegionIdHistoryNotFound](docs/GetMarketsRegionIdHistoryNotFound.md)
  - [GetMarketsRegionIdHistoryUnprocessableEntity](docs/GetMarketsRegionIdHistoryUnprocessableEntity.md)
  - [GetMarketsRegionIdOrders200Ok](docs/GetMarketsRegionIdOrders200Ok.md)
@@ -607,16 +609,19 @@ Class | Method | HTTP request | Description
  - [PostCharactersCharacterIdAssetsLocations200Ok](docs/PostCharactersCharacterIdAssetsLocations200Ok.md)
  - [PostCharactersCharacterIdAssetsLocationsPosition](docs/PostCharactersCharacterIdAssetsLocationsPosition.md)
  - [PostCharactersCharacterIdAssetsNames200Ok](docs/PostCharactersCharacterIdAssetsNames200Ok.md)
+ - [PostCharactersCharacterIdContactsError520](docs/PostCharactersCharacterIdContactsError520.md)
  - [PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
  - [PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
  - [PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)
- - [PostCharactersCharacterIdMail520Response](docs/PostCharactersCharacterIdMail520Response.md)
+ - [PostCharactersCharacterIdMailError520](docs/PostCharactersCharacterIdMailError520.md)
  - [PostCharactersCharacterIdMailLabelsLabel](docs/PostCharactersCharacterIdMailLabelsLabel.md)
  - [PostCharactersCharacterIdMailMail](docs/PostCharactersCharacterIdMailMail.md)
  - [PostCharactersCharacterIdMailRecipient](docs/PostCharactersCharacterIdMailRecipient.md)
  - [PostCorporationsCorporationIdAssetsLocations200Ok](docs/PostCorporationsCorporationIdAssetsLocations200Ok.md)
+ - [PostCorporationsCorporationIdAssetsLocationsNotFound](docs/PostCorporationsCorporationIdAssetsLocationsNotFound.md)
  - [PostCorporationsCorporationIdAssetsLocationsPosition](docs/PostCorporationsCorporationIdAssetsLocationsPosition.md)
  - [PostCorporationsCorporationIdAssetsNames200Ok](docs/PostCorporationsCorporationIdAssetsNames200Ok.md)
+ - [PostCorporationsCorporationIdAssetsNamesNotFound](docs/PostCorporationsCorporationIdAssetsNamesNotFound.md)
  - [PostFleetsFleetIdMembersInvitation](docs/PostFleetsFleetIdMembersInvitation.md)
  - [PostFleetsFleetIdMembersNotFound](docs/PostFleetsFleetIdMembersNotFound.md)
  - [PostFleetsFleetIdMembersUnprocessableEntity](docs/PostFleetsFleetIdMembersUnprocessableEntity.md)
@@ -661,7 +666,7 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: https://login.eveonline.com/oauth/authorize
+- **Authorization URL**: https://login.eveonline.com/v2/oauth/authorize
 - **Scopes**: 
   - esi-alliances.read_contacts.v1: EVE SSO scope esi-alliances.read_contacts.v1
   - esi-assets.read_assets.v1: EVE SSO scope esi-assets.read_assets.v1
@@ -696,7 +701,6 @@ Authentication schemes defined for the API:
   - esi-corporations.read_facilities.v1: EVE SSO scope esi-corporations.read_facilities.v1
   - esi-corporations.read_fw_stats.v1: EVE SSO scope esi-corporations.read_fw_stats.v1
   - esi-corporations.read_medals.v1: EVE SSO scope esi-corporations.read_medals.v1
-  - esi-corporations.read_outposts.v1: EVE SSO scope esi-corporations.read_outposts.v1
   - esi-corporations.read_standings.v1: EVE SSO scope esi-corporations.read_standings.v1
   - esi-corporations.read_starbases.v1: EVE SSO scope esi-corporations.read_starbases.v1
   - esi-corporations.read_structures.v1: EVE SSO scope esi-corporations.read_structures.v1

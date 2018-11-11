@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdIndustryJobs"></a>
 # **getCharactersCharacterIdIndustryJobs**
-> List&lt;GetCharactersCharacterIdIndustryJobs200Ok&gt; getCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdIndustryJobs200Ok&gt; getCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token)
 
 List character industry jobs
 
@@ -41,12 +41,10 @@ IndustryApi apiInstance = new IndustryApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Boolean includeCompleted = true; // Boolean | Whether retrieve completed character industry jobs as well
+Boolean includeCompleted = true; // Boolean | Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdIndustryJobs200Ok> result = apiInstance.getCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdIndustryJobs200Ok> result = apiInstance.getCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCharactersCharacterIdIndustryJobs");
@@ -61,10 +59,8 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **includeCompleted** | **Boolean**| Whether retrieve completed character industry jobs as well | [optional]
+ **includeCompleted** | **Boolean**| Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -81,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdMining"></a>
 # **getCharactersCharacterIdMining**
-> List&lt;GetCharactersCharacterIdMining200Ok&gt; getCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdMining200Ok&gt; getCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token)
 
 Character mining ledger
 
@@ -108,10 +104,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdMining200Ok> result = apiInstance.getCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdMining200Ok> result = apiInstance.getCharactersCharacterIdMining(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCharactersCharacterIdMining");
@@ -128,8 +122,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -146,11 +138,11 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationCorporationIdMiningExtractions"></a>
 # **getCorporationCorporationIdMiningExtractions**
-> List&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; getCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; getCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token)
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Structure_manager
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 ```java
@@ -173,10 +165,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationCorporationIdMiningExtractions200Ok> result = apiInstance.getCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationCorporationIdMiningExtractions200Ok> result = apiInstance.getCorporationCorporationIdMiningExtractions(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCorporationCorporationIdMiningExtractions");
@@ -193,8 +183,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -211,7 +199,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationCorporationIdMiningObservers"></a>
 # **getCorporationCorporationIdMiningObservers**
-> List&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; getCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; getCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token)
 
 Corporation mining observers
 
@@ -238,10 +226,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationCorporationIdMiningObservers200Ok> result = apiInstance.getCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationCorporationIdMiningObservers200Ok> result = apiInstance.getCorporationCorporationIdMiningObservers(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCorporationCorporationIdMiningObservers");
@@ -258,8 +244,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -276,7 +260,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationCorporationIdMiningObserversObserverId"></a>
 # **getCorporationCorporationIdMiningObserversObserverId**
-> List&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; getCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; getCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token)
 
 Observed corporation mining
 
@@ -304,10 +288,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationCorporationIdMiningObserversObserverId200Ok> result = apiInstance.getCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationCorporationIdMiningObserversObserverId200Ok> result = apiInstance.getCorporationCorporationIdMiningObserversObserverId(corporationId, observerId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCorporationCorporationIdMiningObserversObserverId");
@@ -325,8 +307,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -343,11 +323,11 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdIndustryJobs"></a>
 # **getCorporationsCorporationIdIndustryJobs**
-> List&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; getCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; getCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token)
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): FactoryManager
+List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 ```java
@@ -368,13 +348,11 @@ IndustryApi apiInstance = new IndustryApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Boolean includeCompleted = false; // Boolean | Whether retrieve completed industry jobs as well
+Boolean includeCompleted = false; // Boolean | Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdIndustryJobs200Ok> result = apiInstance.getCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdIndustryJobs200Ok> result = apiInstance.getCorporationsCorporationIdIndustryJobs(corporationId, datasource, ifNoneMatch, includeCompleted, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getCorporationsCorporationIdIndustryJobs");
@@ -389,11 +367,9 @@ Name | Type | Description  | Notes
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **includeCompleted** | **Boolean**| Whether retrieve completed industry jobs as well | [optional] [default to false]
+ **includeCompleted** | **Boolean**| Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days | [optional] [default to false]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -410,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="getIndustryFacilities"></a>
 # **getIndustryFacilities**
-> List&lt;GetIndustryFacilities200Ok&gt; getIndustryFacilities(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetIndustryFacilities200Ok&gt; getIndustryFacilities(datasource, ifNoneMatch)
 
 List industry facilities
 
@@ -426,10 +402,8 @@ Return a list of industry facilities  ---  This route is cached for up to 3600 s
 IndustryApi apiInstance = new IndustryApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetIndustryFacilities200Ok> result = apiInstance.getIndustryFacilities(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetIndustryFacilities200Ok> result = apiInstance.getIndustryFacilities(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getIndustryFacilities");
@@ -443,8 +417,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -461,7 +433,7 @@ No authorization required
 
 <a name="getIndustrySystems"></a>
 # **getIndustrySystems**
-> List&lt;GetIndustrySystems200Ok&gt; getIndustrySystems(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetIndustrySystems200Ok&gt; getIndustrySystems(datasource, ifNoneMatch)
 
 List solar system cost indices
 
@@ -477,10 +449,8 @@ Return cost indices for solar systems  ---  This route is cached for up to 3600 
 IndustryApi apiInstance = new IndustryApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetIndustrySystems200Ok> result = apiInstance.getIndustrySystems(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetIndustrySystems200Ok> result = apiInstance.getIndustrySystems(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IndustryApi#getIndustrySystems");
@@ -494,8 +464,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
