@@ -5,7 +5,7 @@
     "hideGenerationTimestamp" : true,
     "groupId" : "com.github.tkhamez",
     "artifactId" : "swagger-eve-java",
-    "artifactVersion" : "0.8.1.1",
+    "artifactVersion" : "1.0.0",
     "artifactUrl" : "https://github.com/tkhamez/swagger-eve-java",
     "artifactDescription" : "EVE Swagger Java Client",
     "scmConnection" : "scm:git:https://github.com/tkhamez/swagger-eve-java.git",

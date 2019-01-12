@@ -529,7 +529,7 @@ public class AllianceApi {
 
     /**
      * Get alliance icon
-     * Get the icon urls for a alliance  ---  This route is cached for up to 3600 seconds
+     * Get the icon urls for a alliance  ---  This route expires daily at 11:05
      * @param allianceId An EVE alliance ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -543,7 +543,7 @@ public class AllianceApi {
 
     /**
      * Get alliance icon
-     * Get the icon urls for a alliance  ---  This route is cached for up to 3600 seconds
+     * Get the icon urls for a alliance  ---  This route expires daily at 11:05
      * @param allianceId An EVE alliance ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -558,7 +558,7 @@ public class AllianceApi {
 
     /**
      * Get alliance icon (asynchronously)
-     * Get the icon urls for a alliance  ---  This route is cached for up to 3600 seconds
+     * Get the icon urls for a alliance  ---  This route expires daily at 11:05
      * @param allianceId An EVE alliance ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)

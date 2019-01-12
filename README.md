@@ -1,5 +1,3 @@
-[![](https://jitpack.io/v/tkhamez/swagger-eve-java.svg)](https://jitpack.io/#tkhamez/swagger-eve-java)
-
 # swagger-eve-java
 
 ## Requirements
@@ -30,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.github.tkhamez</groupId>
     <artifactId>swagger-eve-java</artifactId>
-    <version>0.8.1.1</version>
+    <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -40,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.github.tkhamez:swagger-eve-java:0.8.1.1"
+compile "com.github.tkhamez:swagger-eve-java:1.0.0"
 ```
 
 ### Others
@@ -51,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/swagger-eve-java-0.8.1.1.jar
+* target/swagger-eve-java-1.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -117,7 +115,7 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdCorporationhistory**](docs/CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
 *CharacterApi* | [**getCharactersCharacterIdFatigue**](docs/CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
 *CharacterApi* | [**getCharactersCharacterIdMedals**](docs/CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
-*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v3/characters/{character_id}/notifications/ | Get character notifications
+*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v4/characters/{character_id}/notifications/ | Get character notifications
 *CharacterApi* | [**getCharactersCharacterIdNotificationsContacts**](docs/CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles

@@ -2811,13 +2811,14 @@ public class UniverseApi {
     /**
      * Build call for getUniverseStructures
      * @param datasource The server name you would like data from (optional, default to tranquility)
+     * @param filter Only list public structures that have this service online (optional)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUniverseStructuresCall(String datasource, String ifNoneMatch, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUniverseStructuresCall(String datasource, String filter, String ifNoneMatch, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2827,6 +2828,8 @@ public class UniverseApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (datasource != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("datasource", datasource));
+        if (filter != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (ifNoneMatch != null)
@@ -2863,10 +2866,10 @@ public class UniverseApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUniverseStructuresValidateBeforeCall(String datasource, String ifNoneMatch, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUniverseStructuresValidateBeforeCall(String datasource, String filter, String ifNoneMatch, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = getUniverseStructuresCall(datasource, ifNoneMatch, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUniverseStructuresCall(datasource, filter, ifNoneMatch, progressListener, progressRequestListener);
         return call;
 
     }
@@ -2875,12 +2878,13 @@ public class UniverseApi {
      * List all public structures
      * List all public structures  ---  This route is cached for up to 3600 seconds
      * @param datasource The server name you would like data from (optional, default to tranquility)
+     * @param filter Only list public structures that have this service online (optional)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
      * @return List&lt;Long&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Long> getUniverseStructures(String datasource, String ifNoneMatch) throws ApiException {
-        ApiResponse<List<Long>> resp = getUniverseStructuresWithHttpInfo(datasource, ifNoneMatch);
+    public List<Long> getUniverseStructures(String datasource, String filter, String ifNoneMatch) throws ApiException {
+        ApiResponse<List<Long>> resp = getUniverseStructuresWithHttpInfo(datasource, filter, ifNoneMatch);
         return resp.getData();
     }
 
@@ -2888,12 +2892,13 @@ public class UniverseApi {
      * List all public structures
      * List all public structures  ---  This route is cached for up to 3600 seconds
      * @param datasource The server name you would like data from (optional, default to tranquility)
+     * @param filter Only list public structures that have this service online (optional)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
      * @return ApiResponse&lt;List&lt;Long&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Long>> getUniverseStructuresWithHttpInfo(String datasource, String ifNoneMatch) throws ApiException {
-        com.squareup.okhttp.Call call = getUniverseStructuresValidateBeforeCall(datasource, ifNoneMatch, null, null);
+    public ApiResponse<List<Long>> getUniverseStructuresWithHttpInfo(String datasource, String filter, String ifNoneMatch) throws ApiException {
+        com.squareup.okhttp.Call call = getUniverseStructuresValidateBeforeCall(datasource, filter, ifNoneMatch, null, null);
         Type localVarReturnType = new TypeToken<List<Long>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -2902,12 +2907,13 @@ public class UniverseApi {
      * List all public structures (asynchronously)
      * List all public structures  ---  This route is cached for up to 3600 seconds
      * @param datasource The server name you would like data from (optional, default to tranquility)
+     * @param filter Only list public structures that have this service online (optional)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUniverseStructuresAsync(String datasource, String ifNoneMatch, final ApiCallback<List<Long>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUniverseStructuresAsync(String datasource, String filter, String ifNoneMatch, final ApiCallback<List<Long>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2928,7 +2934,7 @@ public class UniverseApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUniverseStructuresValidateBeforeCall(datasource, ifNoneMatch, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUniverseStructuresValidateBeforeCall(datasource, filter, ifNoneMatch, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<Long>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

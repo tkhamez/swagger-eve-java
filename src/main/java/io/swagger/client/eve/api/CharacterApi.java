@@ -932,7 +932,7 @@ public class CharacterApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v3/characters/{character_id}/notifications/"
+        String localVarPath = "/v4/characters/{character_id}/notifications/"
             .replaceAll("\\{" + "character_id" + "\\}", apiClient.escapeString(characterId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -992,7 +992,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -1007,7 +1007,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -1023,7 +1023,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications (asynchronously)
-     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+     * Return character notifications  ---  This route is cached for up to 600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -1271,7 +1271,7 @@ public class CharacterApi {
 
     /**
      * Get character portraits
-     * Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
+     * Get portrait urls for a character  ---  This route expires daily at 11:05
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -1285,7 +1285,7 @@ public class CharacterApi {
 
     /**
      * Get character portraits
-     * Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
+     * Get portrait urls for a character  ---  This route expires daily at 11:05
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -1300,7 +1300,7 @@ public class CharacterApi {
 
     /**
      * Get character portraits (asynchronously)
-     * Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
+     * Get portrait urls for a character  ---  This route expires daily at 11:05
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)

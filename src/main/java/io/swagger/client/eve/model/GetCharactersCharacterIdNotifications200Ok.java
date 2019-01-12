@@ -182,6 +182,8 @@ public class GetCharactersCharacterIdNotifications200Ok {
     
     CLONEREVOKEDMSG2("CloneRevokedMsg2"),
     
+    COMBATOPERATIONFINISHED("CombatOperationFinished"),
+    
     CONTACTADD("ContactAdd"),
     
     CONTACTEDIT("ContactEdit"),
@@ -295,6 +297,8 @@ public class GetCharactersCharacterIdNotifications200Ok {
     IHUBDESTROYEDBYBILLFAILURE("IHubDestroyedByBillFailure"),
     
     INCURSIONCOMPLETEDMSG("IncursionCompletedMsg"),
+    
+    INDUSTRYOPERATIONFINISHED("IndustryOperationFinished"),
     
     INDUSTRYTEAMAUCTIONLOST("IndustryTeamAuctionLost"),
     

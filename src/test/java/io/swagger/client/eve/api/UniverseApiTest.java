@@ -453,8 +453,9 @@ public class UniverseApiTest {
     @Test
     public void getUniverseStructuresTest() throws ApiException {
         String datasource = null;
+        String filter = null;
         String ifNoneMatch = null;
-        List<Long> response = api.getUniverseStructures(datasource, ifNoneMatch);
+        List<Long> response = api.getUniverseStructures(datasource, filter, ifNoneMatch);
 
         // TODO: test validations
     }

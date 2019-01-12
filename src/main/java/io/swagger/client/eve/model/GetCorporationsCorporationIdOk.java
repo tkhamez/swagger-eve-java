@@ -69,6 +69,9 @@ public class GetCorporationsCorporationIdOk {
   @SerializedName("url")
   private String url = null;
 
+  @SerializedName("war_eligible")
+  private Boolean warEligible = null;
+
   public GetCorporationsCorporationIdOk allianceId(Integer allianceId) {
     this.allianceId = allianceId;
     return this;
@@ -305,6 +308,24 @@ public class GetCorporationsCorporationIdOk {
     this.url = url;
   }
 
+  public GetCorporationsCorporationIdOk warEligible(Boolean warEligible) {
+    this.warEligible = warEligible;
+    return this;
+  }
+
+   /**
+   * war_eligible boolean
+   * @return warEligible
+  **/
+  @ApiModelProperty(value = "war_eligible boolean")
+  public Boolean isWarEligible() {
+    return warEligible;
+  }
+
+  public void setWarEligible(Boolean warEligible) {
+    this.warEligible = warEligible;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -327,12 +348,13 @@ public class GetCorporationsCorporationIdOk {
         Objects.equals(this.shares, getCorporationsCorporationIdOk.shares) &&
         Objects.equals(this.taxRate, getCorporationsCorporationIdOk.taxRate) &&
         Objects.equals(this.ticker, getCorporationsCorporationIdOk.ticker) &&
-        Objects.equals(this.url, getCorporationsCorporationIdOk.url);
+        Objects.equals(this.url, getCorporationsCorporationIdOk.url) &&
+        Objects.equals(this.warEligible, getCorporationsCorporationIdOk.warEligible);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allianceId, ceoId, creatorId, dateFounded, description, factionId, homeStationId, memberCount, name, shares, taxRate, ticker, url);
+    return Objects.hash(allianceId, ceoId, creatorId, dateFounded, description, factionId, homeStationId, memberCount, name, shares, taxRate, ticker, url, warEligible);
   }
 
 
@@ -354,6 +376,7 @@ public class GetCorporationsCorporationIdOk {
     sb.append("    taxRate: ").append(toIndentedString(taxRate)).append("\n");
     sb.append("    ticker: ").append(toIndentedString(ticker)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    warEligible: ").append(toIndentedString(warEligible)).append("\n");
     sb.append("}");
     return sb.toString();
   }
