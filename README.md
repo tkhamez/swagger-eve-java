@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/tkhamez/swagger-eve-java.svg)](https://jitpack.io/#tkhamez/swagger-eve-java)
 # swagger-eve-java
 
 ## Requirements
